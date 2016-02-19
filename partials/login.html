@@ -8,17 +8,17 @@
     <form >
       <div class="col s12">
         <div class="login input-field">
-          <i ng-class="{'active':userNameHasFocus==true,'inactive':userNameHasFocus==false}" class="material-icons prefix inactive"><img src="assets/images/icons/user.png" alt=""></i>
+          <i ng-class="{'activeInput':userNameHasFocus==true,'inactive':userNameHasFocus==false}" class="material-icons prefix inactive"><img src="assets/images/icons/user.png" alt=""></i>
           <input ng-init="userNameHasFocus=false" ng-focus="userNameHasFocus = true" ng-blur="userNameHasFocus = false" id="icon_prefix" type="text" class="validate">
           <label for="icon_prefix">Username</label>
         </div>
         <div class="login input-field">
-          <i ng-class="{'active':passwordHasFocus==true,'inactive':passwordHasFocus==false}" class="material-icons prefix inactive"><img src="assets/images/icons/padlock.png" alt=""></i>
+          <i ng-class="{'activeInput':passwordHasFocus==true,'inactive':passwordHasFocus==false}" class="material-icons prefix inactive"><img src="assets/images/icons/padlock.png" alt=""></i>
           <input ng-init="passwordHasFocus=false" ng-focus="passwordHasFocus = true" ng-blur="passwordHasFocus = false" id="icon_telephone" type="password" class="validate">
           <label for="icon_telephone">Password</label>
         </div>
         <br>
-        <button id="loginButton" ng-click="signIn()" class="loginButton">Sign In</button>
+        <button id="loginButton" ng-click="signIn()" class="main-button loginButton">Sign In</button>
       </div>
     </form>
     <div class="col s12">
