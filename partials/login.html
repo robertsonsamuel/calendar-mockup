@@ -17,8 +17,13 @@
           <input ng-init="passwordHasFocus=false" ng-focus="passwordHasFocus = true" ng-blur="passwordHasFocus = false" id="icon_telephone" type="password" class="validate">
           <label for="icon_telephone">Password</label>
         </div>
+        <br>
+        <button id="loginButton" ng-click="signIn()" class="loginButton">Sign In</button>
       </div>
     </form>
+    <div class="col s12">
+      <p class="footer-text">Don't have an account? <a class="orange-text" href="">Sign up</a></p>
+    </div>
   </div>
 
 </div>
