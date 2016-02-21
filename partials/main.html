@@ -1,0 +1,66 @@
+<div scroll class="fixedTop">
+  <div class="calHead">
+    <div class="row">
+      <div class="col s12 ">
+        <h5 class="center-align">Tuesday</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+        <img class="left-align" src="assets/images/icons/left_arrow.png" alt="">
+      </div>
+      <div class="col s8">
+        <h1 class="center-align date">03</h1>
+      </div>
+      <div class="col s2">
+        <img class=" arrow right-align" src="assets/images/icons/right_arrow.png" alt="">
+      </div>
+    </div>
+    <div ng-class="{calActionFixed:boolChangeClass}" class="calAction row">
+      <div class="col s2">
+        <a href="#"><img class="left-align" src="assets/images/icons/calendar.png" alt=""></a>
+      </div>
+      <div class="col s8">
+        <h6 class="center-align">NOVEMBER 2015</h6>
+      </div>
+      <div class="col s2">
+        <a href="#"><img class="right-align" src="assets/images/icons/plus_sign.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div  class="container">
+  <div ng-repeat="event in events" class="eventContainer">
+  <div class="row eventHead">
+    <div class="col s8">
+      <p class="eventTitle">{{event.title}}</p>
+    </div>
+    <div class="col s4">
+      <div class="timeLabel valign-wrapper">
+        <img class=" leftIconLabel valign left-align" src="assets/images/icons/bell.png" alt=""> <span class="valign right-align"><p class="redText"> 15 Min</p></span>
+      </div>
+    </div>
+  </div>
+  <div class="row eventBody">
+  <div class="col s6">
+      <div class="valign-wrapper">
+      <img class="leftIconLabel" src="assets/images/icons/clock.png" alt=""> <span class="valign right-align">
+        <p class="grey-text lighten-3">{{event.start_time | date : 'h:mma'}} - {{event.end_time | date : 'h:mma'}}</p></span>
+      </div>
+    </div>
+    <div class="col s6 pull-s1">
+      <div class="valign-wrapper">
+      <img class="leftIconLabel" src="assets/images/icons/location_pin.png" alt=""> <span class=" valign location left-align"><p class="grey-text lighten-3">{{event.location}}</p></span>
+    </div>
+    </div>
+    <div class="col s12 eventFooter">
+      <div ng-if="event.participants.length > 3">
+      <p class="grey-text left-align">with: {{event.participants[0]}}, {{event.participants[1]}}, {{event.participants[2]}} ++..</p>
+
+      </div>
+      <p ng-hide="event.participants.length > 3" class="grey-text left-align">with: {{event.participants.join(', ') }}</p>
+    </div>
+  </div>
+  </div>
+</div>

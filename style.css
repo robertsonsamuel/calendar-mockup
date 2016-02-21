@@ -19,6 +19,9 @@ img.logoImg {
     position: relative;
     margin-top: 2rem;
 }
+.redText{
+  color: #DD8B65;
+}
 button.loginButton {
     background: #EA9801;
     width: 280px;
@@ -34,3 +37,65 @@ p.footer-text {
     top: 15vh;
     text-align: center;
 }
+.calHead {
+    background: #DC7B20;
+    color: white;
+    height: 150px;
+}
+.calAction {
+    background: #DC7B20;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+    bottom: 87px;
+    border-top: 1px solid #B57500;
+    padding-top: 11px;
+}
+.calActionFixed {
+    background: #DC7B20;
+    color: white;
+    position: fixed;
+    padding-bottom: 10px;
+    width: 100%;
+    top: 0;
+    bottom: inherit;
+    border-top: 1px solid #B57500;
+    padding-top: 11px;
+    z-index: 99;
+}
+
+
+h1.center-align.date {
+    font-size: 6.3rem;
+    position: relative;
+    bottom: 10vh;
+}
+img.leftIconLabel.valign.left-align {
+    padding-right: 5px;
+}
+img.leftIconLabel {
+    padding-right: 5px;
+}
+p.eventTitle.ng-binding {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.row.eventBody {
+    position: relative;
+    bottom: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+.row.eventHead {
+    margin-bottom: 0;
+}
+.col.s12.eventFooter {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.21);
+    padding-bottom: 0;
+}
+.col.s6.pull-s1 {
+    padding-right: 0;
+}
+
+/* Animations */
