@@ -1,4 +1,13 @@
 'use strict';
+$(document).ready(function() {
+  $("#loginButton").on('click', function(){
+    console.log('clicked');
+  $("#loginButton").text("");
+	$("#loginButton").addClass("expand");
+	$(".fab-sha").addClass("active");
+	$(".close").addClass("active");
+})
+});
 
 let app = angular.module('mainApp', ['ui.router']);
 
@@ -34,8 +43,22 @@ app.directive("scroll", function ($window) {
 
 app.controller('loginCtrl', function ($scope, $state) {
   $scope.clicked = false;
-  $scope.signIn = function () {
+
+  function animate() {
+      $scope.loading = false;
+      $("#loginButton").text("");
+      $("#loginButton").addClass("expand");
+  }
+
+  function goState() {
     $state.go('main')
+  }
+
+  $scope.signIn = function () {
+    $scope.loading = true;
+    $('#loadingImg').removeClass('hidden').addClass('spin')
+    setTimeout(animate, 1000);
+    setTimeout(goState, 2500);
   }
 
 })

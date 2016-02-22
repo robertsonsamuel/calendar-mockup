@@ -22,6 +22,9 @@ img.logoImg {
 .redText{
   color: #DD8B65;
 }
+.hidden{
+  display: none;
+}
 button.loginButton {
     background: #EA9801;
     width: 280px;
@@ -30,11 +33,9 @@ button.loginButton {
     color: white;
     border: none;
     position: relative;
-    top: 15vh;
 }
 p.footer-text {
     position: relative;
-    top: 15vh;
     text-align: center;
 }
 .calHead {
@@ -99,3 +100,61 @@ p.eventTitle.ng-binding {
 }
 
 /* Animations */
+.card {
+  width: 260px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .main {
+  width: 100%;
+  height: 70%;
+  background-color: #97f4ff;
+  z-index: 1;
+}
+
+.card .loginButton {
+  width: 50px;
+  height: 50px;
+  background-color: #ffe375;
+  position: absolute;
+  z-index: 99;
+  right: 20px;
+  top: calc(70% - 25px);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transform: scale3d(1, 1, 1);
+  transition: 0.6s cubic-bezier(0.65, -0.4, 0.49, 1.4);
+  transition-delay: .2s;
+}
+
+
+.loginButton.expand {
+  cursor: default;
+  transform: scale3d(13, 13, 1);
+  /*transition: 0.6s cubic-bezier(0.65, -0.68, 0.49, 1.94);*/
+  transition: 0.6s cubic-bezier(0.65, -0.68, 0.49, 1.94);
+  transition-delay: .1s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.loginButton:focus {
+    outline: none;
+    background-color: #EA9801;
+}
+
+.spin {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

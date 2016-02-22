@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row">
-    <form >
+    <form>
       <div class="col s12">
         <div class="login input-field">
           <i ng-class="{'activeInput':userNameHasFocus==true,'inactive':userNameHasFocus==false}" class="material-icons prefix inactive"><img src="assets/images/icons/user.png" alt=""></i>
@@ -18,12 +18,17 @@
           <label for="icon_telephone">Password</label>
         </div>
         <br>
-        <button id="loginButton" ng-click="signIn()" class="main-button loginButton">Sign In</button>
+        <br>
+        <br>
+        <br>
+        <button ng-hide="loading" ng-click="signIn()" id="loginButton" class="main-button loginButton">Sign In</button>
+        <div class="center-align">
+        <img ng-show="loading" ng-class="{spin:loading}" id="loadingImg" class="hidden" src="assets/images/loading_indicator_w_bg.png" alt="">
+        </div>
       </div>
     </form>
     <div class="col s12">
       <p class="footer-text">Don't have an account? <a class="orange-text" href="">Sign up</a></p>
     </div>
   </div>
-
 </div>
